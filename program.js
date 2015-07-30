@@ -5,6 +5,21 @@ document.addEventListener("DOMContentLoaded", function() {
     var service;
     var map;
 
+    var createMarker = function(map, pos, content) {
+        var infowindow = new google.maps.InfoWindow({
+            content: "Hello World!"
+        });
+
+        var marker = new google.maps.Marker({
+            position: pos,
+            map: map
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map,marker);
+        });
+    }
+
     function initialize() {
         var mapOptions = {
             center: {
@@ -57,26 +72,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
                 console.log (latitude,longitude);
                 
-                var mapWindowContent = "Speed Limit: " + accidentObject  Number of Vehicles: 3 Number of Casualties: 4 Date: 4/1/1999 Time: 00:00;
+                //var mapWindowContent = "Speed Limit: " + accidentObject  Number of Vehicles: 3 Number of Casualties: 4 Date: 4/1/1999 Time: 00:00;
                 
-                // var infoWindow = google.maps.InfoWindow({
-                //     content: mapWindowContent
-                // });
-                
-                var marker2 = new google.maps.Marker({
-                    position: new google.maps.LatLng(latitude, longitude),
-                    map: map,
-                    icon: image
-                });
-                
-                // google.maps.event.addListener(marker2, 'click', function(){
-                //     infoWindow.open(map.marker2);
-                // });
+                createMarker(map, new google.maps.LatLng(latitude, longitude), "Hello World");
             }
         });
 
             }
         });
+
+
+    
 
     function getData() {
         console.log("getdata");
@@ -101,10 +107,9 @@ document.addEventListener("DOMContentLoaded", function() {
                         if (locationObject["id"] == extremeLocationId) {
                             var lat = locationObject["latitude"];
                             var lon = locationObject["longitude"];
-                            var marker = new google.maps.Marker({
-                                position: new google.maps.LatLng(lat, lon),
-                                map: map,
-                            });
+
+                            createMarker(map, new google.maps.LatLng(lat, lon), "Hello World");
+
                         }
 
                     }

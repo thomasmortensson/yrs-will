@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.html -->
+<html lang="en-gb">
+
+<head>
+    <meta charset="utf-8">
+    <title>Weather Ware</title>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDRPYa3kI_xKHkvRYupTtawsIKzFBnzntE">
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/header.css">
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="program.js"></script>
+    <link rel="stylesheet" type="text/css" href="styling.css">
+</head>
+
+<body>
+
+    <div class="bs-docs-header" id="content" tabindex="-1">
+        <h1>&nbsp Weather Ware</h1>
+        <br>
+        <h4>&nbsp &nbsp How to stay safe, avoid crashes, extreme weather and closed roads</h4>
+
+    </div>
+    <div class="container-fluid">
+        <div class="col-md-3">
+            <form class="form">
+                <div class="form-group">
+                    <input id="city-search" type="search" class="form-control" placeholder="city" onsubmit="return false;"></input>
+                </div>
+            </form>
+            <h3>How to use Weather Ware</h3>
+            <p>
+            First, search a city in the city bar. Weather Ware will home in
+            on your city. If it is in the UK, you might see red pins. These show
+            extreme weather. You may also see pins that are other colours. These are
+            accidents that happend in 2014.
+            </p>
+            <table>
+                <tr>
+                    <td><img src="media/green_icon.png">
+                    <td>&nbsp This Icon means that the crash reported is mild</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>  </td>
+                </tr>
+            </table>
+            <p>
+            <table>
+                <tr>
+                    <td>
+                    <td>&nbsp This Icon means the crash marked is moderate</td>
+                </tr>
+            </table>
+            <p>
+            <table>
+                <tr>
+                    <td><img src="media/purple_icon.png">
+                    <td>&nbsp This Icon means that the crash marked is severe</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><img src="media/red_icon.png">
+                    <td>&nbsp This Icon means the was weather is severe in this area</td>
+                </tr>
+            </table>
+        </div>
+        <div id="content" class="col-md-9">
+            <div id="map-canvas">
+            </div>
+        </div>
+    </div>
+    </div>
+    <link rel="shortcut icon" type="image/ico" href="media/Favicon.ico" />
+</body>
+
+</html>
+
+<link rel="icon" href="media/Favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="media/Favicon.ico" type="image/x-icon" />
+
+<h7>Carrot Coders, this webpage and all links have copyright 2015. All rights reserved</h7>
+
